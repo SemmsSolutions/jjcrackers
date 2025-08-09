@@ -1,0 +1,82 @@
+/* InfoPage.css */
+
+.info-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background-color: #fffefa;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.7;
+}
+
+.info-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #d35400;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.info-intro {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.info-section {
+  margin-bottom: 2rem;
+  padding: 1rem 1.2rem;
+  background-color: #fff;
+  border-left: 5px solid #e67e22;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.info-section:hover {
+  background-color: #fff7e6;
+}
+
+.info-section h2 {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-bottom: 0.8rem;
+}
+
+.info-section p,
+.info-section ul {
+  font-size: 1rem;
+  color: #444;
+}
+
+.info-section ul {
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.info-section ul ul {
+  list-style-type: circle;
+  margin-top: 0.5rem;
+}
+
+.info-section strong {
+  color: #c0392b;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .info-title {
+    font-size: 1.5rem;
+  }
+
+  .info-section h2 {
+    font-size: 1rem;
+  }
+
+  .info-section p,
+  .info-section ul {
+    font-size: 0.95rem;
+  }
+}

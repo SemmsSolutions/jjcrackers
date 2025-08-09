@@ -1,0 +1,65 @@
+/* 🖼️ Image Upload Box */
+.image-upload-box {
+  width: 100%;
+  height: 200px;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.preview-img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* 📦 Horizontal Product List */
+.product-list {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 15px;
+}
+.product-card {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+.product-card:hover {
+  transform: translateY(-4px);
+}
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.card-body {
+  padding: 15px;
+}
+.card-footer {
+  padding: 10px 15px;
+  background: #f8f8f8;
+}
+
+/* 📱 Responsive: Vertical List in Mobile */
+@media (max-width: 768px) {
+  .product-list {
+    flex-direction: column;
+    overflow-x: unset;
+  }
+
+  .product-card {
+    width: 100%;
+    flex: none;
+  }
+}

@@ -1,0 +1,136 @@
+/* ============================= */
+/* MAIN CONTAINER */
+/* ============================= */
+.checkout-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+/* ============================= */
+/* HEADINGS */
+/* ============================= */
+.checkout-container h3,
+.checkout-container h4,
+.checkout-container h5 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.checkout-container h3 {
+  border-bottom: 2px solid #ffcc00;
+  padding-bottom: 5px;
+}
+
+/* ============================= */
+/* ORDER ITEMS */
+/* ============================= */
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+/* ============================= */
+/* TOTALS */
+/* ============================= */
+.total-box {
+  background: #fef7dc;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.total-box h4 {
+  color: #e67e22;
+}
+
+/* ============================= */
+/* FORM STYLES */
+/* ============================= */
+.checkout-container input,
+.checkout-container textarea,
+.checkout-container select {
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 14px;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.checkout-container input:focus,
+.checkout-container textarea:focus,
+.checkout-container select:focus {
+  outline: none;
+  border-color: #ffcc00;
+  box-shadow: 0 0 4px rgba(255, 204, 0, 0.4);
+}
+
+/* ============================= */
+/* BUTTON */
+/* ============================= */
+.checkout-container .btn-success {
+  background-color: #28a745;
+  border: none;
+  font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-container .btn-success:hover {
+  background-color: #218838;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+@media (max-width: 768px) {
+  .checkout-container {
+    padding: 15px;
+  }
+
+  .order-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-item p {
+    margin: 2px 0;
+  }
+
+  .total-box h4 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .checkout-container {
+    padding: 10px;
+  }
+
+  .checkout-container h3 {
+    font-size: 18px;
+  }
+
+  .checkout-container input,
+  .checkout-container textarea,
+  .checkout-container select {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .checkout-container .btn-success {
+    width: 100%;
+    padding: 10px;
+  }
+}

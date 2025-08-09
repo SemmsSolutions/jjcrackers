@@ -1,0 +1,171 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
+.contact-section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #111;
+}
+
+.contact-section h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 0.3rem;
+  font-weight: 800;
+}
+
+.intro-text {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.contact-container {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact-info,
+.contact-form-container {
+  flex: 1 1 400px;
+  min-width: 300px;
+}
+
+.contact-info h2,
+.contact-form-container h2 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.address {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.phone {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.email-link {
+  color: #3366cc;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 2rem 0;
+}
+
+.follow-text {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.social-icon.facebook {
+  background: #3b5998;
+}
+.social-icon.instagram {
+  background: #000000;
+}
+.social-icon.linkedin {
+  background: #0077b5;
+}
+.social-icon.youtube {
+  background: #cc0000;
+}
+
+.social-icon:hover {
+  opacity: 0.8;
+}
+
+.contact-form-container form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 45%;
+  min-width: 150px;
+}
+
+.input-group.full-width {
+  flex-basis: 100%;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+}
+
+input,
+textarea {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  transition: border-color 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #d32f2f;
+  box-shadow: 0 0 5px #d32f2f88;
+}
+
+.submit-btn {
+  margin-top: 1rem;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 10px 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  flex-basis: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #b71c1c;
+}
