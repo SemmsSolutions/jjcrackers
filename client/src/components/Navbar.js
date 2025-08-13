@@ -406,6 +406,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaPhoneAlt, FaHistory } from "react-icons/fa";
 import { API } from "../api";
 import "../styles/Navbar.css";
+import logo from "../images/logo.png";
 
 const Navbar = () => {
   const [cats, setCats] = useState([]);
@@ -446,24 +447,21 @@ const Navbar = () => {
 
   return (
     <header className="navbar-header">
+      {/* ===== Top bar with scrolling text + banner image ===== */}
       <div className="top-bar">
-      <div className="min-order">
-  <span className="scroll-text">
-    🎆 Diwali sale is open now. Please buy early to get best discounts. Happy Diwali....!!! 🎆
-  </span>
-</div>
-
-
-        {/* <div className="login">
-          <Link to="/admin" className="login-link">
-            <FaUser /> Login
-          </Link>
-        </div> */}
+        <div className="min-order" aria-live="polite">
+          <span className="scroll-text">
+            🎆 Diwali sale is open now. Please buy early to get best discounts. Happy Diwali....!!! 🎆
+          </span>
+        </div>
+       
       </div>
 
+      {/* ===== Main Navbar ===== */}
       <nav className="main-navbar">
         <div className="logo">
-          <img src="/logo.png" alt="Crackers Shop" />
+          {/* place your logo in /public/logo.png */}
+          <img src={logo} alt="JJ Crackers Shop" />
         </div>
 
         {/* All Categories (click to toggle) */}
@@ -490,7 +488,7 @@ const Navbar = () => {
                       type="button"
                       role="menuitem"
                       className="cat-item"
-                      onMouseDown={(e) => e.preventDefault()} // avoid flicker
+                      onMouseDown={(e) => e.preventDefault()} // avoid losing focus before click
                       onClick={() => goCategory(c)}
                     >
                       {label}
@@ -506,8 +504,7 @@ const Navbar = () => {
           <li><Link to="/" className="active">Home</Link></li>
           <li><Link to="/cart">Cart</Link></li>
           <li><Link to="/products">Products</Link></li>
-          <li><Link to="/orders"><FaHistory /> Order History</Link></li>
-          {/* <li><Link to="/contact">Contact Us</Link></li> */}
+          <li><Link to="/orders"><FaHistory />&nbsp;Order History</Link></li>
           <li><Link to="/enquiry">Quick Enquiry</Link></li>
         </ul>
 
