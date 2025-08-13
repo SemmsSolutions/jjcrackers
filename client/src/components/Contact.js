@@ -1,5 +1,7 @@
 import React from "react";
 import "../styles/Contact.css";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
+
 
 const Contact = () => {
   return (
@@ -18,12 +20,13 @@ const Contact = () => {
             <span role="img" aria-label="location">
               📍
             </span>{" "}
-            SF #345/3B, Naranapuram Village,
-            <br />
-            Sivakasi – 626 123, Tamil Nadu, India.
+           J J Crackers, No.372 Sandhana,
+Maariyamman Nagar, Meenampatti,
+Sivakasi-626 189.
+
           </p>
           <p className="phone">
-            <strong>+91 93455 61247</strong>
+            <strong>+91 88831 24111</strong>
           </p>
           <a href="mailto:jjcrackershub87@gmail.com" className="email-link">
             jjcrackershub87@gmail.com
@@ -32,44 +35,44 @@ const Contact = () => {
           <hr />
 
           <p className="follow-text">Follow us:</p>
-          <div className="social-icons">
-            <a
-              href="#"
-              aria-label="Facebook"
-              className="social-icon facebook"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-facebook-f"></i>
-            </a>
-            <a
-              href="#"
-              aria-label="Instagram"
-              className="social-icon instagram"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-instagram"></i>
-            </a>
-            <a
-              href="#"
-              aria-label="LinkedIn"
-              className="social-icon linkedin"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-linkedin-in"></i>
-            </a>
-            <a
-              href="#"
-              aria-label="YouTube"
-              className="social-icon youtube"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-youtube"></i>
-            </a>
-          </div>
+           <div className="social-icons">
+      <a
+        href="https://www.facebook.com/profile.php?id=61579090161194"
+        aria-label="Facebook"
+        className="social-icon facebook"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaFacebookF />
+      </a>
+      <a
+        href="https://www.instagram.com/jj_crackers_05/"
+        aria-label="Instagram"
+        className="social-icon instagram"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaInstagram />
+      </a>
+      {/* <a
+        href="https://www.linkedin.com/in/yourpage"
+        aria-label="LinkedIn"
+        className="social-icon linkedin"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaLinkedinIn />
+      </a> */}
+      {/* <a
+        href="https://www.youtube.com/yourchannel"
+        aria-label="YouTube"
+        className="social-icon youtube"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaYoutube />
+      </a> */}
+    </div>
         </div>
 
         {/* Right side - Form */}

@@ -1,0 +1,107 @@
+/* page shell */
+.product-list-page {
+  --muted: #6b7280;
+  --chip-bg: #f3f4f6;
+  --chip-bd: #e5e7eb;
+  --grid-gap: 16px;
+}
+
+/* header row */
+.pl-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.pl-header h2 {
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+.pl-chip {
+  background: var(--chip-bg);
+  border: 1px solid var(--chip-bd);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  color: #111827;
+}
+
+/* skeletons (loading state) */
+.pl-skel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+  gap: var(--grid-gap);
+  margin-top: 12px;
+}
+.pl-skel {
+  height: 260px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #f6f7f9 25%, #eceff3 37%, #f6f7f9 63%);
+  background-size: 400% 100%;
+  animation: pl-shimmer 1.2s ease-in-out infinite;
+}
+@keyframes pl-shimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: 0 0; }
+}
+
+/* empty state */
+.pl-empty {
+  margin-top: 12px;
+  color: var(--muted);
+}
+
+/* product grid */
+.pl-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--grid-gap);
+  margin-top: 12px;
+}
+
+/* pager */
+.pl-pager {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+.pl-btn {
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.pl-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  border-color: #d1d5db;
+  box-shadow: 0 8px 20px rgba(0,0,0,.06);
+}
+.pl-btn:disabled {
+  cursor: not-allowed;
+  opacity: .6;
+}
+.pl-pageinfo {
+  font-weight: 600;
+  color: #374151;
+}
+
+/* responsive */
+@media (max-width: 992px) {
+  .pl-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+}
+@media (max-width: 768px) {
+  .pl-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+  .pl-header h2 { font-size: 20px; }
+}
+@media (max-width: 480px) {
+  .pl-grid { grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+  .pl-btn { border-radius: 8px; padding: 8px 10px; }
+}

@@ -93,16 +93,14 @@
 // export default App;
 
 
-
-
-import React from "react";
+import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-// Import your pages here
+// Pages
 import Home from "./pages/Home";
 import ProductList from "./pages/ProductList";
 import Cart from "./pages/Cart";
@@ -121,22 +119,26 @@ import Faq from "./components/FAQ";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
+  // ✅ Lift search state
+  const [searchQuery, setSearchQuery] = useState("");
+
   return (
     <>
-      <Navbar />
+      {/* Pass setSearchQuery to Navbar */}
+      <Navbar setSearchQuery={setSearchQuery} searchQuery={searchQuery} />
       <ToastContainer position="bottom-right" theme="colored" />
-      <ScrollToTop/>
+      <ScrollToTop />
+
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/products" element={<ProductList />} />
+        {/* Pass searchQuery to ProductList */}
+        <Route path="/products" element={<ProductList searchQuery={searchQuery} />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/orders" element={<OrderHistory />} />
         <Route path="/admin" element={<AdminLogin />} />
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
         <Route path="/enquiry" element={<QuickEnquiryForm />} />
-
-        {/* Additional pages */}
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/terms" element={<Terms />} />
