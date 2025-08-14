@@ -64,12 +64,12 @@
 // };
 
 // export default ProductList;
-
+// ProductList.js
 import React, { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import axios from "axios";
 import { API } from "../api";
-import ProductCard from "../pages/ProductCard"; // NOTE: adjust path if yours differs
+import ProductCard from "./ProductCard"; // Adjust path if needed
 import "../styles/ProductList.css";
 
 export default function ProductList({ searchQuery }) {
@@ -77,7 +77,6 @@ export default function ProductList({ searchQuery }) {
   const category = sp.get("category") || "";
   const qFromUrl = sp.get("q") || "";
 
-  // Prefer lifted search from Navbar; else use URL ?q=
   const q = useMemo(() => {
     const s = (searchQuery || "").trim();
     return s !== "" ? s : (qFromUrl || "").trim();
@@ -90,9 +89,7 @@ export default function ProductList({ searchQuery }) {
   const [loading, setLoading] = useState(true);
   const limit = 24;
 
-  useEffect(() => {
-    setPage(1);
-  }, [category, q]);
+  useEffect(() => setPage(1), [category, q]);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -124,7 +121,7 @@ export default function ProductList({ searchQuery }) {
       }
     };
     fetchProducts();
-  }, [category, q, page]); // API base is stable import
+  }, [category, q, page]);
 
   return (
     <div className="container mt-4 product-list-page">
